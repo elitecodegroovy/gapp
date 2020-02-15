@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/services/sqlstore/migrator"
+	"github.com/elitecodegroovy/gapp/pkg/services/sqlstore/migrator"
 )
 
 type Descriptor struct {

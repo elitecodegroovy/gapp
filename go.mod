@@ -1,4 +1,4 @@
-module github.com/elitecodegroovy/gnetwork
+module github.com/elitecodegroovy/gapp
 
 go 1.13
 

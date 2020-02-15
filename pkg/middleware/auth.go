@@ -6,9 +6,9 @@ import (
 
 	macaron "gopkg.in/macaron.v1"
 
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
-	"github.com/elitecodegroovy/gnetwork/pkg/util"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/util"
 )
 
 type AuthOptions struct {

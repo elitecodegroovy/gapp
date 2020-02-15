@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/bus"
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/log"
+	"github.com/elitecodegroovy/gapp/pkg/bus"
+	"github.com/elitecodegroovy/gapp/pkg/infra/log"
 	"github.com/go-xorm/xorm"
 	sqlite3 "github.com/mattn/go-sqlite3"
 )

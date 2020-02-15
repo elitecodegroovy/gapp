@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/services/sqlstore"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/services/sqlstore"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 	"github.com/stretchr/testify/assert"
 )
 

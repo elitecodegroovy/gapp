@@ -3,8 +3,8 @@ package remotecache
 import (
 	"testing"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/services/sqlstore"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/services/sqlstore"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 )
 
 // NewFakeStore creates store for testing

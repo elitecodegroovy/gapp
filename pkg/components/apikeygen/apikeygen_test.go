@@ -3,7 +3,7 @@ package apikeygen
 import (
 	"testing"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/util"
+	"github.com/elitecodegroovy/gapp/pkg/util"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

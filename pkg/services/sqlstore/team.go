@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/bus"
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/bus"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
 )
 
 func init() {

@@ -1,7 +1,7 @@
 package sqlstore
 
 import (
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 	"testing"
 
 	. "github.com/smartystreets/goconvey/convey"

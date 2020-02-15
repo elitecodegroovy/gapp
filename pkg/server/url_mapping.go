@@ -1,9 +1,9 @@
 package server
 
 import (
-	"github.com/elitecodegroovy/gnetwork/pkg/middleware"
-	"github.com/elitecodegroovy/gnetwork/pkg/routing"
-	"github.com/elitecodegroovy/gnetwork/pkg/server/dtos"
+	"github.com/elitecodegroovy/gapp/pkg/middleware"
+	"github.com/elitecodegroovy/gapp/pkg/routing"
+	"github.com/elitecodegroovy/gapp/pkg/server/dtos"
 	"github.com/go-macaron/binding"
 )
 

@@ -20,7 +20,7 @@ import (
 	"github.com/go-macaron/session"
 	"gopkg.in/ini.v1"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/log"
+	"github.com/elitecodegroovy/gapp/pkg/infra/log"
 	"github.com/elitecodegroovy/util"
 )
 

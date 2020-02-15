@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/bradfitz/gomemcache/memcache"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 )
 
 const memcachedCacheType = "memcached"

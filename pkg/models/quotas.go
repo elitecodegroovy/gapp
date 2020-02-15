@@ -2,7 +2,7 @@ package models
 
 import (
 	"errors"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 	"time"
 )
 

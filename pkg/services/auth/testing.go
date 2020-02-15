@@ -3,7 +3,7 @@ package auth
 import (
 	"context"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/models"
 )
 
 type FakeUserAuthTokenService struct {

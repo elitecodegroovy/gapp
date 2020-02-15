@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
-	"github.com/elitecodegroovy/gnetwork/pkg/util/errutil"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/util/errutil"
 	redis "gopkg.in/redis.v2"
 )
 

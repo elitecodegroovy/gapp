@@ -5,7 +5,7 @@ import (
 
 	. "github.com/smartystreets/goconvey/convey"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/services/annotations"
+	"github.com/elitecodegroovy/gapp/pkg/services/annotations"
 )
 
 func TestAnnotations(t *testing.T) {

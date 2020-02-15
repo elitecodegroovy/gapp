@@ -2,9 +2,9 @@ package login
 
 import (
 	"errors"
-	"github.com/elitecodegroovy/gnetwork/pkg/bus"
-	"github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/registry"
+	"github.com/elitecodegroovy/gapp/pkg/bus"
+	"github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/registry"
 )
 
 var (

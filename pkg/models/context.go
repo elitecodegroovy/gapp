@@ -3,8 +3,8 @@ package models
 import (
 	"strings"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/log"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/infra/log"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 	"github.com/prometheus/client_golang/prometheus"
 	"gopkg.in/macaron.v1"
 )

@@ -2,8 +2,8 @@ package server
 
 import (
 	"encoding/json"
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 	"gopkg.in/macaron.v1"
 	"net/http"
 )

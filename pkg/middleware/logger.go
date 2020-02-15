@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"time"
 
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 	"github.com/prometheus/client_golang/prometheus"
 	"gopkg.in/macaron.v1"
 )

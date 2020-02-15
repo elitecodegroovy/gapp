@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"fmt"
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/log"
+	"github.com/elitecodegroovy/gapp/pkg/infra/log"
 	"io/ioutil"
 )
 

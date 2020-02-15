@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

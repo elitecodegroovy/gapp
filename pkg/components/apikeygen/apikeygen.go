@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/util"
+	"github.com/elitecodegroovy/gapp/pkg/util"
 )
 
 var ErrInvalidApiKey = errors.New("Invalid Api Key")

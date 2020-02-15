@@ -4,7 +4,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/log"
+	"github.com/elitecodegroovy/gapp/pkg/infra/log"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

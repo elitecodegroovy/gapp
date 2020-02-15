@@ -12,9 +12,9 @@ import (
 	"net"
 	"strconv"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
-	"github.com/elitecodegroovy/gnetwork/pkg/util/errutil"
+	"github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/util/errutil"
 	gomail "gopkg.in/mail.v2"
 )
 

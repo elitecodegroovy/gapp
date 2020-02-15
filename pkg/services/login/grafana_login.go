@@ -3,9 +3,9 @@ package login
 import (
 	"crypto/subtle"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/bus"
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/util"
+	"github.com/elitecodegroovy/gapp/pkg/bus"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/util"
 )
 
 var validatePassword = func(providedPassword string, userPassword string, userSalt string) error {

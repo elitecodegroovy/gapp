@@ -13,7 +13,7 @@ import (
 
 	"golang.org/x/net/context/ctxhttp"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/util"
+	"github.com/elitecodegroovy/gapp/pkg/util"
 )
 
 type Webhook struct {

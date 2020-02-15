@@ -4,10 +4,10 @@ import (
 	"encoding/base64"
 	"time"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/bus"
-	"github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
-	"github.com/elitecodegroovy/gnetwork/pkg/util"
+	"github.com/elitecodegroovy/gapp/pkg/bus"
+	"github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/util"
 )
 
 var getTime = time.Now

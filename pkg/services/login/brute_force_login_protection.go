@@ -3,9 +3,9 @@ package login
 import (
 	"time"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/bus"
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/bus"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 )
 
 var (

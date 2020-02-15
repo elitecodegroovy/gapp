@@ -2,12 +2,12 @@ package server
 
 import (
 	"errors"
-	"github.com/elitecodegroovy/gnetwork/pkg/bus"
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/metrics"
-	"github.com/elitecodegroovy/gnetwork/pkg/middleware"
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/server/dtos"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/bus"
+	"github.com/elitecodegroovy/gapp/pkg/infra/metrics"
+	"github.com/elitecodegroovy/gapp/pkg/middleware"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/server/dtos"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 	"net/url"
 )
 

@@ -2,7 +2,7 @@ package sqlstore
 
 import (
 	"fmt"
-	glog "github.com/elitecodegroovy/gnetwork/pkg/infra/log"
+	glog "github.com/elitecodegroovy/gapp/pkg/infra/log"
 
 	"github.com/go-xorm/core"
 )

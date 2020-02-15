@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/metrics"
+	"github.com/elitecodegroovy/gapp/pkg/infra/metrics"
 	"gopkg.in/macaron.v1"
 )
 

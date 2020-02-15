@@ -3,8 +3,8 @@ package notifications
 import (
 	"testing"
 
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

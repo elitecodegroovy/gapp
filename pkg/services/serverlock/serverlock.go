@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/log"
-	"github.com/elitecodegroovy/gnetwork/pkg/registry"
-	"github.com/elitecodegroovy/gnetwork/pkg/services/sqlstore"
+	"github.com/elitecodegroovy/gapp/pkg/infra/log"
+	"github.com/elitecodegroovy/gapp/pkg/registry"
+	"github.com/elitecodegroovy/gapp/pkg/services/sqlstore"
 )
 
 func init() {

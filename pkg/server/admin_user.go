@@ -1,11 +1,11 @@
 package server
 
 import (
-	"github.com/elitecodegroovy/gnetwork/pkg/bus"
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/metrics"
-	"github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/server/dtos"
-	"github.com/elitecodegroovy/gnetwork/pkg/util"
+	"github.com/elitecodegroovy/gapp/pkg/bus"
+	"github.com/elitecodegroovy/gapp/pkg/infra/metrics"
+	"github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/server/dtos"
+	"github.com/elitecodegroovy/gapp/pkg/util"
 )
 
 func AdminCreateUser(c *models.ReqContext, form dtos.AdminCreateUserForm) {

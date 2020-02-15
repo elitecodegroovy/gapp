@@ -1,4 +1,4 @@
-package main
+package app_server
 
 import (
 	"context"
@@ -31,7 +31,17 @@ import (
 	"time"
 )
 
-type GNetworkServerImpl struct {
+var version = "1.0.0"
+var commit = "NA"
+var buildBranch = "master"
+var buildstamp string
+
+var configFile = flag.String("config", "", "path to config file")
+var homePath = flag.String("homepath", "", "path to gnetwork install/home path, defaults to working directory")
+var pidFile = flag.String("pidfile", "", "path to pid file")
+var packaging = flag.String("packaging", "unknown", "describes the way gnetwork was installed")
+
+type AppServerImpl struct {
 	context            context.Context
 	shutdownFn         context.CancelFunc
 	childRoutines      *errgroup.Group
@@ -44,13 +54,13 @@ type GNetworkServerImpl struct {
 	HttpServer    *server.HTTPServer    `inject:""`
 }
 
-func NewGNetworkServer() *GNetworkServerImpl {
+func NewGNetworkServer() *AppServerImpl {
 	//a copy of parent
 	rootCtx, shutdownFn := context.WithCancel(context.Background())
 	//a new Group
 	childRoutines, childCtx := errgroup.WithContext(rootCtx)
 
-	return &GNetworkServerImpl{
+	return &AppServerImpl{
 		context:       childCtx,
 		shutdownFn:    shutdownFn,
 		childRoutines: childRoutines,
@@ -59,7 +69,7 @@ func NewGNetworkServer() *GNetworkServerImpl {
 	}
 }
 
-func (g *GNetworkServerImpl) Shutdown(reason string) {
+func (g *AppServerImpl) Shutdown(reason string) {
 	g.log.Info("Shutdown started", "reason", reason)
 	g.shutdownReason = reason
 	g.shutdownInProgress = true
@@ -71,7 +81,7 @@ func (g *GNetworkServerImpl) Shutdown(reason string) {
 	g.childRoutines.Wait()
 }
 
-func (g *GNetworkServerImpl) Exit(reason error) int {
+func (g *AppServerImpl) Exit(reason error) int {
 	// default exit code is 1
 	code := 1
 
@@ -84,7 +94,7 @@ func (g *GNetworkServerImpl) Exit(reason error) int {
 	return code
 }
 
-func (g *GNetworkServerImpl) loadConfiguration() {
+func (g *AppServerImpl) loadConfiguration() {
 	err := g.cfg.Load(&setting.CommandLineArgs{
 		Config:   *configFile,
 		HomePath: *homePath,
@@ -101,7 +111,7 @@ func (g *GNetworkServerImpl) loadConfiguration() {
 	g.log.Info("loading configuration successfully!")
 }
 
-func (g *GNetworkServerImpl) writePIDFile() {
+func (g *AppServerImpl) writePIDFile() {
 	if *pidFile == "" {
 		g.log.Info("path is empty for the pid file! ")
 		return
@@ -124,7 +134,7 @@ func (g *GNetworkServerImpl) writePIDFile() {
 	g.log.Info("Writing PID file", "path", *pidFile, "pid", pid)
 }
 
-func (g *GNetworkServerImpl) Run() error {
+func (g *AppServerImpl) Run() error {
 	var err error
 	g.loadConfiguration()
 	g.writePIDFile()
@@ -224,7 +234,7 @@ func (g *GNetworkServerImpl) Run() error {
 }
 
 //Setting system signal handling
-func listenToSystemSignals(server *GNetworkServerImpl) {
+func listenToSystemSignals(server *AppServerImpl) {
 	signalChan := make(chan os.Signal, 1)
 	sighupChan := make(chan os.Signal, 1)
 

@@ -2,7 +2,7 @@ package sqlstore
 
 import (
 	"fmt"
-	"github.com/elitecodegroovy/gnetwork/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/models"
 )
 
 func GetOrgUsersForTest(query *models.GetOrgUsersQuery) error {

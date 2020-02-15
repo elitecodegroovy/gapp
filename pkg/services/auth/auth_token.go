@@ -7,14 +7,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/services/serverlock"
+	"github.com/elitecodegroovy/gapp/pkg/services/serverlock"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/log"
-	"github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/registry"
-	"github.com/elitecodegroovy/gnetwork/pkg/services/sqlstore"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
-	"github.com/elitecodegroovy/gnetwork/pkg/util"
+	"github.com/elitecodegroovy/gapp/pkg/infra/log"
+	"github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/registry"
+	"github.com/elitecodegroovy/gapp/pkg/services/sqlstore"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/util"
 )
 
 func init() {

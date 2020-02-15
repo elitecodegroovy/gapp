@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"github.com/Unknwon/com"
 
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 	"time"
 )
 

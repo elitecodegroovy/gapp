@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/services/annotations"
+	"github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/services/annotations"
 )
 
 type SqlAnnotationRepo struct {

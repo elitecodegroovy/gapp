@@ -1,10 +1,10 @@
 package quota
 
 import (
-	"github.com/elitecodegroovy/gnetwork/pkg/bus"
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/registry"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/bus"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/registry"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 )
 
 func init() {

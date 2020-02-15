@@ -6,9 +6,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/components/simplejson"
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/components/simplejson"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 )
 
 type AnyId struct {

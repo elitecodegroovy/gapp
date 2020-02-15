@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/log"
-	"github.com/elitecodegroovy/gnetwork/pkg/services/sqlstore"
+	"github.com/elitecodegroovy/gapp/pkg/infra/log"
+	"github.com/elitecodegroovy/gapp/pkg/services/sqlstore"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

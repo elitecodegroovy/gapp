@@ -23,9 +23,9 @@ import (
 
 	"gopkg.in/macaron.v1"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/log"
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/infra/log"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 )
 
 var (

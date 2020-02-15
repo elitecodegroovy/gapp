@@ -5,8 +5,8 @@ import (
 
 	"gopkg.in/macaron.v1"
 
-	m "github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/services/quota"
+	m "github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/services/quota"
 )
 
 // Quota returns a function that returns a function used to call quotaservice based on target name

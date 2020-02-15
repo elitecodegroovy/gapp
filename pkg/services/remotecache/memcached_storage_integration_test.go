@@ -5,7 +5,7 @@ package remotecache
 import (
 	"testing"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
 )
 
 func TestMemcachedCacheStorage(t *testing.T) {

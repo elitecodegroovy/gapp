@@ -1,6 +1,6 @@
 package annotations
 
-import "github.com/elitecodegroovy/gnetwork/pkg/components/simplejson"
+import "github.com/elitecodegroovy/gapp/pkg/components/simplejson"
 
 type Repository interface {
 	Save(item *Item) error

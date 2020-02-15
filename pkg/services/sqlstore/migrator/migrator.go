@@ -3,7 +3,7 @@ package migrator
 import (
 	"time"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/log"
+	"github.com/elitecodegroovy/gapp/pkg/infra/log"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/xorm"
 	_ "github.com/lib/pq"

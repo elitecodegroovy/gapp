@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"fmt"
-	"github.com/elitecodegroovy/gnetwork/pkg/services/remotecache"
+	"github.com/elitecodegroovy/gapp/pkg/services/remotecache"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -11,12 +11,12 @@ import (
 
 	macaron "gopkg.in/macaron.v1"
 
-	"github.com/elitecodegroovy/gnetwork/pkg/bus"
-	"github.com/elitecodegroovy/gnetwork/pkg/components/apikeygen"
-	"github.com/elitecodegroovy/gnetwork/pkg/infra/log"
-	"github.com/elitecodegroovy/gnetwork/pkg/models"
-	"github.com/elitecodegroovy/gnetwork/pkg/setting"
-	"github.com/elitecodegroovy/gnetwork/pkg/util"
+	"github.com/elitecodegroovy/gapp/pkg/bus"
+	"github.com/elitecodegroovy/gapp/pkg/components/apikeygen"
+	"github.com/elitecodegroovy/gapp/pkg/infra/log"
+	"github.com/elitecodegroovy/gapp/pkg/models"
+	"github.com/elitecodegroovy/gapp/pkg/setting"
+	"github.com/elitecodegroovy/gapp/pkg/util"
 )
 
 var getTime = time.Now
