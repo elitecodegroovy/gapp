@@ -132,20 +132,20 @@ func (g *GNetworkServerImpl) Run() error {
 	serviceGraph := inject.Graph{}
 	err = serviceGraph.Provide(&inject.Object{Value: bus.GetBus()})
 	if err != nil {
-		return fmt.Errorf("Failed to provide object to the graph: %v", err)
+		return fmt.Errorf("failed to provide object to the graph: %v", err)
 	}
 	err = serviceGraph.Provide(&inject.Object{Value: g.cfg})
 	if err != nil {
-		return fmt.Errorf("Failed to provide object to the graph: %v", err)
+		return fmt.Errorf("failed to provide object to the graph: %v", err)
 	}
 	//err = serviceGraph.Provide(&inject.Object{Value: routing.NewRouteRegister(middleware.RequestMetrics, middleware.RequestTracing)})
 	err = serviceGraph.Provide(&inject.Object{Value: routing.NewRouteRegister(middleware.RequestMetrics)})
 	if err != nil {
-		return fmt.Errorf("Failed to provide object to the graph: %v", err)
+		return fmt.Errorf("failed to provide object to the graph: %v", err)
 	}
 	err = serviceGraph.Provide(&inject.Object{Value: localcache.New(5*time.Minute, 10*time.Minute)})
 	if err != nil {
-		return fmt.Errorf("Failed to provide object to the graph: %v", err)
+		return fmt.Errorf("failed to provide object to the graph: %v", err)
 	}
 
 	// self registered services
@@ -155,18 +155,18 @@ func (g *GNetworkServerImpl) Run() error {
 	for _, service := range services {
 		err = serviceGraph.Provide(&inject.Object{Value: service.Instance})
 		if err != nil {
-			return fmt.Errorf("Failed to provide object to the graph: %v", err)
+			return fmt.Errorf("failed to provide object to the graph: %v", err)
 		}
 	}
 
 	err = serviceGraph.Provide(&inject.Object{Value: g})
 	if err != nil {
-		return fmt.Errorf("Failed to provide object to the graph: %v", err)
+		return fmt.Errorf("failed to provide object to the graph: %v", err)
 	}
 
 	// Inject dependencies to services
 	if err := serviceGraph.Populate(); err != nil {
-		return fmt.Errorf("Failed to populate service dependency: %v", err)
+		return fmt.Errorf("failed to populate service dependency: %v", err)
 	}
 
 	// Init & start services
@@ -178,7 +178,7 @@ func (g *GNetworkServerImpl) Run() error {
 		g.log.Info("Initializing " + service.Name)
 
 		if err := service.Instance.Init(); err != nil {
-			return fmt.Errorf("Service init failed: %v", err)
+			return fmt.Errorf("service init failed: %v", err)
 		}
 	}
 
