@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/elitecodegroovy/gapp/pkg/appserver"
 	"github.com/elitecodegroovy/gapp/pkg/infra/log"
 	"github.com/elitecodegroovy/gapp/pkg/setting"
-
 	_ "github.com/go-sql-driver/mysql"
 	sLog "log"
 	"net/http"
@@ -15,16 +15,6 @@ import (
 	"strconv"
 	"time"
 )
-
-var version = "1.0.0"
-var commit = "NA"
-var buildBranch = "master"
-var buildstamp string
-
-var configFile = flag.String("config", "", "path to config file")
-var homePath = flag.String("homepath", "", "path to gnetwork install/home path, defaults to working directory")
-var pidFile = flag.String("pidfile", "", "path to pid file")
-var packaging = flag.String("packaging", "unknown", "describes the way gnetwork was installed")
 
 func validPackaging(packaging string) string {
 	validTypes := []string{"dev", "deb", "rpm", "docker", "brew", "hosted", "unknown"}
@@ -45,7 +35,7 @@ func main() {
 	profilePort := flag.Int("profile-port", 6060, "Define custom port for profiling")
 	flag.Parse()
 	if *v {
-		fmt.Printf("Version %s (commit: %s, branch: %s)\n", version, commit, buildBranch)
+		fmt.Printf("Version %s (commit: %s, branch: %s)\n", appserver.Version, appserver.Commit, appserver.BuildBranch)
 		os.Exit(0)
 	}
 
@@ -71,21 +61,21 @@ func main() {
 		defer trace.Stop()
 	}
 
-	buildstampInt64, _ := strconv.ParseInt(buildstamp, 10, 64)
+	buildstampInt64, _ := strconv.ParseInt(appserver.Buildstamp, 10, 64)
 	if buildstampInt64 == 0 {
 		buildstampInt64 = time.Now().Unix()
 	}
 
-	setting.BuildVersion = version
-	setting.BuildCommit = commit
+	setting.BuildVersion = appserver.Version
+	setting.BuildCommit = appserver.Commit
 	setting.BuildStamp = buildstampInt64
-	setting.BuildBranch = buildBranch
-	setting.Packaging = validPackaging(*packaging)
-	sLog.Printf("Version: %s, Commit Version: %s, Package Iteration: %s\n", version, setting.BuildCommit, setting.BuildBranch)
+	setting.BuildBranch = appserver.BuildBranch
+	setting.Packaging = validPackaging(*appserver.Packaging)
+	sLog.Printf("Version: %s, Commit Version: %s, Package Iteration: %s\n", appserver.Version, setting.BuildCommit, setting.BuildBranch)
 
-	server := NewGNetworkServer()
+	server := appserver.NewGNetworkServer()
 
-	go listenToSystemSignals(server)
+	go appserver.ListenToSystemSignals(server)
 
 	err := server.Run()
 
